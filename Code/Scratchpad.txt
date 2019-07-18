@@ -1,0 +1,19 @@
+asr = {float} 15.496342882894162
+dhuhr = {float} 12.103803073709958
+fajr = {float} 3.8715016206832917
+imsak = {float} 4.605564038858424
+isha = {float} nan
+maghrib = {float} 18.781658931794716
+params = {dict} <class 'dict'>: {'imsak': '10 min', 'dhuhr': '0 min', 'asr': 'Standard', 'highLats': 'NightMiddle', 'fajr': 18.5, 'isha': '90 min', 'maghrib': '0 min', 'midnight': 'Standard'}
+self = {PrayTimes} <__main__.PrayTimes object at 0x000001AB76F37780>
+sunrise = {float} 5.356146438460675
+sunset = {float} 18.848275524130088
+
+fajr = {float} 3.8715016206832917 03:52:17
+sunrise = {float} 5.356146438460675 05:21:22
+dhuhr = {float} 12.103803073709958 12:06:14
+asr = {float} 15.496342882894162 15:29:47
+maghrib = {float} 18.781658931794716 18:46:54
+sunset = {float} 18.848275524130088 18:50:54
+isha = {float} nan
+FastingTime = 14.9101573111114243 14:54:37

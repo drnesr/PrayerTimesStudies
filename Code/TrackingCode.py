@@ -105,7 +105,7 @@ class PrayTimes():
         "imsak"    : '10 min',
         "dhuhr"    : '0 min',
         "asr"      : 'Standard',
-        "highLats" : 'NightMiddle'
+        "highLats" : 'None'#Err# 'NightMiddle'
     }
 
     timeFormat = '24h'
@@ -164,12 +164,25 @@ class PrayTimes():
         return self.methods
 
     # return prayer times for a given date
-    def getTimes(self, date, coords, timezone, dst = 0, formatting = None):
+    def getTimes(self, date, coords, timezone, dst = 0, is_formatted=True, formatting=None):
+        #def getTimes(self, date, coords, timezone, dst=0, formatting=None):
+
         self.lat = coords[0]
+
+        #Added to adjust higher latitudes
+        if self.lat>=55:
+            self.settings["highLats"]= 'NightMiddle'
+        # else:
+        #     self.settings["highLats"]= 'None'
+
         self.lng = coords[1]
         self.elv = coords[2] if len(coords)>2 else 0
+
+        #Modified
+        self.is_formatted = is_formatted
         if formatting != None:
             self.timeFormat = formatting
+
         if type(date).__name__ == 'date':
             date = (date.year, date.month, date.day)
         self.timeZone = timezone + (1 if dst else 0)
@@ -180,7 +193,9 @@ class PrayTimes():
     def getFormattedTime(self, time, formatting, suffixes = None):
         if math.isnan(time):
             return self.invalidTime
-        if formatting == 'Float':
+        if not self.is_formatted:
+            return time
+        if formatting.lower() == 'Float'.lower():
             return time
         if suffixes == None:
             suffixes = self.timeSuffixes
@@ -284,6 +299,11 @@ class PrayTimes():
         else:
             times['midnight'] = times['sunset'] + self.timeDiff(times['sunset'], times['sunrise']) / 2
 
+        # Add FastingDuration (Muddat Alsiyam)
+        times['fasting'] = times['maghrib'] - times['fajr']
+        self.offset['fasting']=0
+
+
         times = self.tuneTimes(times)
         return self.modifyFormats(times)
 
@@ -331,6 +351,7 @@ class PrayTimes():
     def modifyFormats(self, times):
         for name, value in times.items():
             times[name] = self.getFormattedTime(times[name], self.timeFormat)
+            # times[name] = self.getFormattedTime(times[name], self.is_formatted)
         return times
 
     # adjust times for locations in higher latitudes
@@ -423,11 +444,29 @@ class PrayTimes():
 
 #-------------------------- Nesr Code 01 --------------------------
 if __name__ == "__main__":
+    execute = 2
     prayTimes = PrayTimes()
     prayTimes.setMethod('Makkah')
-    msg = 'Prayer Times for today in Riyadh/Saudi Arabia'
-    print(msg,'\n'+ ('='* len(msg)))
-    times = prayTimes.getTimes(date.today(), (24.68773,46.72185), 3);
-    prayers = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight']
-    for prayer in prayers:
-        print(f'{prayer:8}: {times[prayer.lower()]}')
+    prayers = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight', 'Fasting']
+    prayers_lower = [prayer.lower() for prayer in prayers]
+    if execute == 1:
+        msg = 'Prayer Times for today in Riyadh/Saudi Arabia'
+        print(msg,'\n'+ ('='* len(msg)))
+        times = prayTimes.getTimes(date.today(), (24.68773,46.72185), 3, is_formatted=False);
+
+        for prayer in prayers:
+            print(f'{prayer:8}: {times[prayer.lower()]}')
+    elif execute == 2:
+        msg = 'Prayer Times for July 2019 in Riyadh/Saudi Arabia'
+        print(msg, '\n' + ('=' * len(msg)))
+        print(f'{"Day":4}', end='')
+        for prayer in prayers:
+            print(f'{prayer:10}', end='')
+        for d in range(1, 32):
+            times = prayTimes.getTimes(date(2019,7,d), (24.68773, 46.72185), 3, is_formatted=True)
+            print()
+            print(f'{d:3}  ', end='')
+            for prayer in prayers_lower:
+                print(f'{times[prayer]:10}', end='')
+
+        # times = prayTimes.getTimes(date.today(), (24.68773, 46.72185), 3, is_formatted=False)
