@@ -1,6 +1,10 @@
-import math
 import re
 from datetime import date
+
+import math
+import pandas as pd
+
+
 # '''
 # --------------------- Copyright Block ----------------------
 # praytimes.py: Prayer Times Calculator (ver 2.3)
@@ -444,7 +448,7 @@ class PrayTimes():
 
 #-------------------------- Nesr Code 01 --------------------------
 if __name__ == "__main__":
-    execute = 2
+    execute = 3
     prayTimes = PrayTimes()
     prayTimes.setMethod('Makkah')
     prayers = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight', 'Fasting']
@@ -470,3 +474,19 @@ if __name__ == "__main__":
                 print(f'{times[prayer]:10}', end='')
 
         # times = prayTimes.getTimes(date.today(), (24.68773, 46.72185), 3, is_formatted=False)
+    elif execute ==3:
+        msg = 'Prayer Times for one year in Riyadh/Saudi Arabia'
+        daterange = pd.date_range(date(2019,1,1), date(2019,12,31))
+        print(f'{"Date":8}', end='')
+        for prayer in prayers:
+            print(f'{prayer:10}', end='')
+        for single_date in daterange:
+            # print(single_date.strftime("%Y-%m-%d"))
+            #print(single_date.strftime("%b%d"))
+            times = prayTimes.getTimes(date(2019, single_date.month, single_date.day), (24.68773, 46.72185), 3, is_formatted=True)
+            print()
+            print(f'{single_date.strftime("%b%d"):8}  ', end='')
+            for prayer in prayers_lower:
+                print(f'{times[prayer]:10}', end='')
+
+

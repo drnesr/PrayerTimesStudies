@@ -1,3 +1,7 @@
+Added Kuwait and France methods
+Change the parameter 'format' into 'formatting' to avoid keyword override
+
+
 asr = {float} 15.496342882894162
 dhuhr = {float} 12.103803073709958
 fajr = {float} 3.8715016206832917
@@ -17,3 +21,19 @@ maghrib = {float} 18.781658931794716 18:46:54
 sunset = {float} 18.848275524130088 18:50:54
 isha = {float} nan
 FastingTime = 14.9101573111114243 14:54:37
+
+AdjustTime = += -0.11479 -00:06:53
+
+## After adjustTimes
+All above + delta
+
+## After HighLats
+'imsak' (1835973114488) = {float} 4.490774038858424
+'fajr' (1835973114712) = {float} 3.7567116206832916
+'sunrise' (1835973114936) = {float} 5.241356438460675
+'dhuhr' (1835973115104) = {float} 11.989013073709959
+'asr' (1835973115216) = {float} 15.381552882894162
+'sunset' (1835973115384) = {float} 18.73348552413009
+'maghrib' (1835973115496) = {float} 23.98742098129538
+'isha' (1835973115664) = {float} 23.98742098129538
+
