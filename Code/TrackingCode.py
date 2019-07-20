@@ -448,7 +448,7 @@ class PrayTimes():
 
 #-------------------------- Nesr Code 01 --------------------------
 if __name__ == "__main__":
-    execute = 3
+    execute = 4
     prayTimes = PrayTimes()
     prayTimes.setMethod('Makkah')
     prayers = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha', 'Midnight', 'Fasting']
@@ -481,12 +481,37 @@ if __name__ == "__main__":
         for prayer in prayers:
             print(f'{prayer:10}', end='')
         for single_date in daterange:
+            # print(single_date)
             # print(single_date.strftime("%Y-%m-%d"))
-            #print(single_date.strftime("%b%d"))
+            # print(single_date.strftime("%b%d"))
+            #times = prayTimes.getTimes(single_date, (24.68773, 46.72185), 3, is_formatted=True)
             times = prayTimes.getTimes(date(2019, single_date.month, single_date.day), (24.68773, 46.72185), 3, is_formatted=True)
             print()
             print(f'{single_date.strftime("%b%d"):8}  ', end='')
             for prayer in prayers_lower:
                 print(f'{times[prayer]:10}', end='')
+    elif execute == 4:
+        msg = 'Prayer Times for one year in Riyadh/Saudi Arabia using Pandas'
+        daterange = pd.date_range(date(2019, 1, 1), date(2019, 12, 31))
+        titles=['Date']
+        for prayer in prayers:
+            titles.append(prayer)
+        prayer_data=[]
+        for single_date in daterange:
+
+            times = prayTimes.getTimes(date(2019, single_date.month, single_date.day), (24.68773, 46.72185), 3,
+                                       is_formatted=True)
+            times_list = list(times.values())
+            times_list=times_list[1:5]+times_list[6:]
+            fasting_duration = times_list[-1]
+            fasting_duration = fasting_duration.split(':')
+            fasting_duration = int(fasting_duration[0])+int(fasting_duration[1])/60
+            data_row = [single_date.strftime("%b%d")]+times_list[:-1]+[fasting_duration]
+            prayer_data.append(data_row)
+        df=pd.DataFrame(data=prayer_data,columns=titles)
+        print(df)
+
+
+
 
 
