@@ -1,0 +1,6 @@
+Open cmd prompt
+make a new ffolder and put all the required csv files in it
+in the cmd prompt, goto the newly created folder
+type: Copy *.csv combined.csv
+where combined.csv is the new file that will contain all the files
+keep the new file, and then delete or compress the other files.
