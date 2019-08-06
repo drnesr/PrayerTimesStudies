@@ -1,0 +1,45 @@
+Anim,WorldMin,WorldAvg,MakkahDuration,WorldMax,MinCntryIso3,MaxCntryIso3,MinCntryName,MaxCntryName
+101,04:34,12:21,12:12,20:35,NOR,ARG,Norway,Argentina
+107,04:34,12:23,12:14,20:30,NOR,ARG,Norway,Argentina
+115,04:33,12:26,12:18,20:20,NOR,ARG,Norway,Argentina
+123,05:25,12:30,12:23,20:06,NOR,ARG,Norway,Argentina
+201,06:23,12:37,12:30,19:34,GRL,ARG,Greenland,Argentina
+207,07:41,12:42,12:35,18:20,GRL,ARG,Greenland,Argentina
+215,07:54,12:50,12:43,17:21,SJM,ARG,Svalbard and Jan Mayen,Argentina
+223,10:34,13:01,12:52,22:11,GRL,ATA,Greenland,Antarctica
+301,11:36,13:07,12:59,20:58,GRL,ATA,Greenland,Antarctica
+307,12:28,13:15,13:06,20:03,SWE,ATA,Sweden,Antarctica
+315,12:48,13:24,13:16,18:59,GRD,ATA,Grenada,Antarctica
+323,12:54,13:35,13:26,18:35,GRD,SJM,Grenada,Svalbard and Jan Mayen
+401,13:00,13:47,13:37,19:47,GRD,SJM,Grenada,Svalbard and Jan Mayen
+407,12:50,13:55,13:45,20:40,NZL,SJM,New Zealand,Svalbard and Jan Mayen
+415,11:56,14:06,13:56,22:14,ATA,SJM,Antarctica,Svalbard and Jan Mayen
+423,09:06,14:17,14:06,21:31,ATA,RUS,Antarctica,Russian Federation (the)
+501,11:15,14:31,14:16,22:53,ARG,RUS,Argentina,Russian Federation (the)
+507,10:54,14:39,14:24,23:07,ARG,RUS,Argentina,Russian Federation (the)
+515,10:29,14:48,14:32,23:40,ARG,NOR,Argentina,Norway
+523,10:07,14:57,14:40,23:46,ARG,NOR,Argentina,Norway
+601,09:48,15:05,14:47,23:44,ARG,FIN,Argentina,Finland
+607,09:38,15:10,14:50,23:47,ARG,SWE,Argentina,Sweden
+615,09:31,15:13,14:53,23:54,ARG,SWE,Argentina,Sweden
+623,09:29,15:14,14:54,23:56,ARG,RUS,Argentina,Russian Federation (the)
+701,09:34,15:12,14:52,23:51,ARG,RUS,Argentina,Russian Federation (the)
+707,09:41,15:09,14:50,23:47,ARG,RUS,Argentina,Russian Federation (the)
+715,09:55,15:03,14:45,23:42,ARG,RUS,Argentina,Russian Federation (the)
+723,10:15,14:55,14:38,23:41,ARG,NOR,Argentina,Norway
+801,10:41,14:46,14:29,23:37,ARG,NOR,Argentina,Norway
+807,11:00,14:38,14:22,22:54,ARG,RUS,Argentina,Russian Federation (the)
+815,11:29,14:26,14:13,22:17,ARG,RUS,Argentina,Russian Federation (the)
+823,10:05,14:13,14:03,21:11,ATA,RUS,Antarctica,Russian Federation (the)
+901,12:37,14:00,13:51,21:21,SGS,SJM,South Georgia and the South Sandwich Islands,Svalbard and Jan Mayen
+907,12:56,13:52,13:43,20:22,NZL,SJM,New Zealand,Svalbard and Jan Mayen
+915,12:57,13:42,13:33,19:16,GRD,SJM,Grenada,Svalbard and Jan Mayen
+923,12:52,13:31,13:23,18:15,GRD,SJM,Grenada,Svalbard and Jan Mayen
+1001,12:46,13:21,13:13,19:12,FRA,ATA,France,Antarctica
+1007,12:25,13:14,13:05,20:00,GRL,ATA,Greenland,Antarctica
+1015,11:08,13:05,12:56,21:14,GRL,ATA,Greenland,Antarctica
+1023,09:45,12:54,12:47,16:58,GRL,ARG,Greenland,Argentina
+1101,08:08,12:45,12:38,17:58,GRL,ARG,Greenland,Argentina
+1107,06:56,12:39,12:33,18:50,GRL,ARG,Greenland,Argentina
+1115,06:19,12:33,12:26,20:00,NOR,ARG,Norway,Argentina
+1123,04:55,12:29,12:20,20:14,NOR,ARG,Norway,Argentina
