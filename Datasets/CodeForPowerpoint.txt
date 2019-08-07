@@ -1,0 +1,61 @@
+Slide4
+    FixedBackground 6  1 -1 
+        Madina 13  2 
+        Makkah 13  3 
+        Gradient 1  4 
+        White 1  5 
+    Main 13  6 -1 
+    Clock 6  7 -1 
+        Rounded Rectangle 62 1  8 
+        TextBox 63 17  9 
+        Makkah 17  10 
+        TextBox 65 17  11 
+        Straight Connector 66 9  12 
+        Graphic 67 28  13 
+        TextBox 68 17  14 
+        TextBox 69 17  15 
+        TextBox 70 17  16 
+        W_min 17  17 
+        W_avg 17  18 
+        W_max 17  19 
+    Top 6  20 -1 
+        NewLegend 13  21 
+        FastingTime_En 17  22 
+        FastingTime_Ar 17  23 
+        Calendar top 5  25 
+        Calendar bottom 5  26 
+        Clip 1 1  27 
+        Clip 2 1  28 
+        Cal.Table picture 13  29 
+        Whitening the table 1  30 
+    Week4 6  31 -1 
+        Dimed Week1 1  32 
+        Dimed Week2 1  33 
+        Dimed Week3 1  34 
+        Rectangle 138 1  36 
+        Flowchart: Merge 139 1  37 
+        Flowchart: Merge 140 1  38 
+    Week3 6  39 -1 
+        Dimed Week1 1  40 
+        Dimed Week2 1  41 
+        Dimed Week3 1  42 
+        Rectangle 146 1  44 
+        Flowchart: Merge 147 1  45 
+        Flowchart: Merge 148 1  46 
+    Week2 6  47 -1 
+        Dimed Week1 1  48 
+        Dimed Week2 1  49 
+        Dimed Week3 1  50 
+        Rectangle 154 1  52 
+        Flowchart: Merge 155 1  53 
+        Flowchart: Merge 156 1  54 
+    Week1 6  55 -1 
+        Dimed Week1 1  56 
+        Dimed Week2 1  57 
+        Dimed Week3 1  58 
+        Rectangle 162 1  60 
+        Flowchart: Merge 163 1  61 
+        Flowchart: Merge 164 1  62 
+    MonthNames 6  63 -1 
+        MonthEnglish 17  64 
+        MonthArabic 17  65 
